@@ -69,6 +69,34 @@ nav a:hover {
 .container li {
     margin-bottom: 10px;
 }
+.description {
+    display: none; /* Initially hide description */
+    color: #000; /* Set description text color to black */
+}
+
+.project {
+    cursor: pointer; /* Change cursor to pointer on hover to indicate clickability */
+}
+
+.project:hover {
+    color: #007bff; /* Change color to blue on hover */
+}
+
+.project:hover::after {
+    content: '\25B6'; /* Unicode character for a right-pointing arrow */
+    margin-left: 5px; /* Add space between text and arrow */
+}
+
+.languages {
+    margin-top: 10px;
+    list-style-type: none; /* Remove bullet points */
+}
+
+.languages li {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold; /* Bold the language names */
+}
 
 footer {
     background-color: #333; /* Dark background */
