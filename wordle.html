@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Clone</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Wordle Clone</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pip.html">PiP</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <p>Guess the word:</p>
+        <input type="text" id="guessInput">
+        <button onclick="checkGuess()">Check</button>
+        <p id="feedback"></p>
+        <div id="previousGuesses"></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <script src="js/wordle.js"></script>
+</body>
+</html>

@@ -69,6 +69,7 @@ nav a:hover {
 .container li {
     margin-bottom: 10px;
 }
+
 .description {
     display: none; /* Initially hide description */
     color: #000; /* Set description text color to black */
