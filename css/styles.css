@@ -99,6 +99,53 @@ nav a:hover {
     font-weight: bold; /* Bold the language names */
 }
 
+#quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#options button:hover {
+    background-color: #0056b3;
+}
+
+#next-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
 footer {
     background-color: #333; /* Dark background */
     color: #fff; /* White text */
