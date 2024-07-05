@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle Clone</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Wordle Clone</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pip.html">PiP</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Wordle Clone</h1>
+            <nav>
+                <a href="index.html" class="text-gray-300 hover:text-white mx-2">Home</a>
+                <a href="pip.html" class="text-gray-300 hover:text-white mx-2">PiP</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white mx-2">Contact</a>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <p>Guess the word:</p>
-        <input type="text" id="guessInput">
-        <button onclick="checkGuess()">Check</button>
-        <p id="feedback"></p>
-        <div id="previousGuesses"></div>
-    </div>
-    <footer>
+    <main class="container mx-auto p-4">
+        <p class="text-xl font-semibold mb-4">Guess the word:</p>
+        <div class="flex items-center mb-4">
+            <input type="text" id="guessInput" class="border border-gray-300 rounded p-2 mr-2 flex-1">
+            <button onclick="checkGuess()" class="bg-blue-500 text-white p-2 rounded">Check</button>
+        </div>
+        <p id="feedback" class="text-lg mb-4"></p>
+        <div id="previousGuesses" class="bg-white p-4 rounded shadow"></div>
+
+        <section class="bg-white p-4 rounded shadow mt-8">
+            <h2 class="text-2xl font-bold mb-2">Game Rules</h2>
+            <p class="mb-2">
+                The rules are the same as Wordle. The word you are trying to guess is 5 letters. No two letters will be used twice in the word. An example of an impossible word is fleet. There are two e's, so it is not a possible word. 
+            </p>
+            <p class="mb-2">
+                A <span class="text-red-500 font-bold">red square</span> means the letter is not used, a <span class="text-yellow-500 font-bold">yellow square</span> means it is used but in a different place, and a <span class="text-green-500 font-bold">green square</span> shows that you have the correct letter and placement.
+            </p>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <p>&copy; 2024 My Portfolio</p>
     </footer>
 

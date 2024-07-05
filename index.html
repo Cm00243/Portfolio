@@ -1,98 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Connor McIntire Portfolio</title>
+    <!-- Link to Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pip.html">PiP</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hello! I am a Computing major looking for an internship or job oppurtunities, and this is a showcase of my projects. Please feel free to click the names and get a description of each.</p>
-        <p>The PiP page is my projects I have in progress and please feel free to contact me for work oppurtunities or suggestions.</p>
-        <div>
-            <h3>Projects</h3>
-            <ul>
-                <li class="project">
-                    <strong>Car Lot:</strong> 
-                    <span class="description">
-                        Developed a program to mimic a real-life car lot that allowed users to set their budget and purchase cars, allowed users to sort cars by make, model, cost, and year, and allowed the owner to add new cars to the lot which would automatically be put in the system and be available to purchase
-                        <ul class="languages">
-                            <li>Object-Oriented Programming</li>
-                            <li>C#</li>
-                            <li>Data Structures</li>
-                        </ul>
-                    </span>
-                </li>
 
-                <li class="project">
-                    <strong>Fundraising Database:</strong> 
-                    <span class="description">
-                        Empowered users with intuitive access to critical information, including client details, fundraising activities, and donation amounts, enhancing operational efficiency. 
-                        <ul class="languages">
-                            <li>SQL</li>
-                            <li>MySQL</li>
-                        </ul>
-                    </span>
-                </li>
-
-                <li class="project">
-                    <strong>Mock Library:</strong> 
-                    <span class="description">
-                        This is a project involving a library modeled after a real one.
-                        <ul class="languages">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Java</li>
-                            <li>Flask</li>
-                            <li>Python</li>
-                        </ul>
-                    </span>
-                </li>
-
-
-                <li class="project">
-                    <strong>Text Twist Game:</strong> 
-                    <span class="description">
-                        Developed a program that gives users random letters and allows has them make as many words as possible from the given letters. The high scores are then stored and maintain themselves between different sessions of the game.
-                        <ul class="languages">
-                            <li>Object-Oriented Programming</li>
-                            <li>C#</li>
-                            <li>Data Structures</li>
-                        </ul>
-                    </span>
-                </li>
-
-                <li class="project">
-                    <strong>Wordle Clone:</strong> 
-                    <span class="description">
-                        Made a copy of the wordle game to get more practice creating things that a user can interact with. 
-                        <a href="wordle.html">Click here</a> to view the Wordle Clone project page.
-                        <ul class="languages">
-                            <li>CSS</li>
-                            <li>HTML</li>
-                            <li>Javascript</li>
-                        </ul>
-                    </span>
-                </li>
-                
-            </ul>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Connor McIntire Portfolio</h1>
+            <nav>
+                <a href="index.html" class="text-gray-300 hover:text-white mx-2">Home</a>
+                <a href="pip.html" class="text-gray-300 hover:text-white mx-2">PiP</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white mx-2">Contact</a>
+            </nav>
         </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
+    </header>
+    <main class="container mx-auto p-4">
+        <!-- Skills Section -->
+        <section class="my-8">
+            <h3 class="text-2xl font-bold mb-4">Skills</h3>
+            <ul class="list-disc list-inside bg-white p-4 rounded shadow">
+                <li class="font-bold">Object-Oriented Programming</li>
+                <li class="font-bold">C#</li>
+                <li class="font-bold">SQL</li>
+                <li class="font-bold">MySQL</li>
+                <li class="font-bold">HTML</li>
+                <li class="font-bold">CSS</li>
+                <li class="font-bold">Java</li>
+                <li class="font-bold">Flask</li>
+                <li class="font-bold">Python</li>
+                <li class="font-bold">JavaScript</li>
+                <li class="font-bold">Visual Studio Code</li>
+                <li class="font-bold">Node</li>
+                <li class="font-bold">Leadership</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="my-8">
+            <h3 class="text-2xl font-bold mb-4">Projects (click each to open)</h3>
+            <ul>
+                <li class="bg-white p-4 mb-4 rounded shadow">
+                    <div class="cursor-pointer" onclick="toggleDescription(this)">
+                        <strong class="text-xl">Car Lot:</strong>
+                        <span class="description block mt-2 hidden">
+                            Developed a program to mimic a real-life car lot that allowed users to set their budget and purchase cars, allowed users to sort cars by make, model, cost, and year, and allowed the owner to add new cars to the lot which would automatically be put in the system and be available to purchase
+                            <ul class="languages list-disc list-inside mt-2">
+                                <li class="font-bold">Object-Oriented Programming</li>
+                                <li class="font-bold">C#</li>
+                                <li class="font-bold">Data Structures</li>
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+                <li class="bg-white p-4 mb-4 rounded shadow">
+                    <div class="cursor-pointer" onclick="toggleDescription(this)">
+                        <strong class="text-xl">Fundraising Database:</strong>
+                        <span class="description block mt-2 hidden">
+                            Empowered users with intuitive access to critical information, including client details, fundraising activities, and donation amounts, enhancing operational efficiency.
+                            <ul class="languages list-disc list-inside mt-2">
+                                <li class="font-bold">SQL</li>
+                                <li class="font-bold">MySQL</li>
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+                <li class="bg-white p-4 mb-4 rounded shadow">
+                    <div class="cursor-pointer" onclick="toggleDescription(this)">
+                        <strong class="text-xl">Mock Library:</strong>
+                        <span class="description block mt-2 hidden">
+                            This is a project involving a library modeled after a real one.
+                            <ul class="languages list-disc list-inside mt-2">
+                                <li class="font-bold">HTML</li>
+                                <li class="font-bold">CSS</li>
+                                <li class="font-bold">Java</li>
+                                <li class="font-bold">Flask</li>
+                                <li class="font-bold">Python</li>
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+                <li class="bg-white p-4 mb-4 rounded shadow">
+                    <div class="cursor-pointer" onclick="toggleDescription(this)">
+                        <strong class="text-xl">Text Twist Game:</strong>
+                        <span class="description block mt-2 hidden">
+                            Developed a program that gives users random letters and allows has them make as many words as possible from the given letters. The high scores are then stored and maintain themselves between different sessions of the game.
+                            <ul class="languages list-disc list-inside mt-2">
+                                <li class="font-bold">Object-Oriented Programming</li>
+                                <li class="font-bold">C#</li>
+                                <li class="font-bold">Data Structures</li>
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+                <li class="bg-white p-4 mb-4 rounded shadow">
+                    <div class="cursor-pointer" onclick="toggleDescription(this)">
+                        <strong class="text-xl">Wordle Clone:</strong>
+                        <span class="description block mt-2 hidden">
+                            Made a copy of the wordle game to get more practice creating things that a user can interact with.
+                            <a href="wordle.html" class="text-blue-500 hover:underline">Click here</a> to view the Wordle Clone project page.
+                            <ul class="languages list-disc list-inside mt-2">
+                                <li class="font-bold">CSS</li>
+                                <li class="font-bold">HTML</li>
+                                <li class="font-bold">Javascript</li>
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
+        <p>&copy; 2024 Connor McIntire Portfolio</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript for toggling project descriptions -->
+    <script>
+        function toggleDescription(element) {
+            const description = element.querySelector('.description');
+            description.classList.toggle('hidden');
+        }
+    </script>
 </body>
-</html>
 
+</html>

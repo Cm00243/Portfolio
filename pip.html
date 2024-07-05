@@ -4,47 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PiP - My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>PiP - Projects in Progress</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pip.html">PiP</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Connor McIntire Portfolio</h1>
+            <nav>
+                <a href="index.html" class="text-gray-300 hover:text-white mx-2">Home</a>
+                <a href="pip.html" class="text-gray-300 hover:text-white mx-2">PiP</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white mx-2">Contact</a>
+            </nav>
+        </div>
     </header>
-    <div class="container">
+    <main class="container mx-auto p-4">
+        <h3 class="text-2xl font-bold mb-4">Projects In Progress (click each to open)</h3>
         <ul>
-            <li class="project">
-                <strong>Game Library:</strong> 
-                <span class="description">
-                    I am using steam api to create a table of games that I have all the achievements in.
-                    <ul class="languages">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
-                </span>
+            <li class="bg-white p-4 mb-4 rounded shadow">
+                <div class="cursor-pointer" onclick="toggleDescription(this)">
+                    <strong class="text-xl">Game Library:</strong>
+                    <span class="description block mt-2 hidden">
+                        I am using steam api to create a table of games that I have all the achievements in.
+                        <ul class="languages list-disc list-inside mt-2">
+                            <li class="font-bold">HTML</li>
+                            <li class="font-bold">CSS</li>
+                        </ul>
+                    </span>
+                </div>
             </li>
-            <li class="project">
-                <strong>Online Marketplace:</strong>
-                <span class="description">Creating an online marketplace to sell clothes for those who attend EDM festivals
-                    <ul class="languages">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
 
-                </span>
-                
+            <li class="bg-white p-4 mb-4 rounded shadow">
+                <div class="cursor-pointer" onclick="toggleDescription(this)">
+                    <strong class="text-xl">Movie Review Website:</strong>
+                    <span class="description block mt-2 hidden">
+                        Creating a movie review website to allow users to rate every movie they watch. 
+                        <ul class="languages list-disc list-inside mt-2">
+                            <li class="font-bold">HTML</li>
+                            <li class="font-bold">CSS</li>
+                            <li class="font-bold">MySQL</li>
+                            <li class="font-bold">Node</li>
+                            <li class="font-bold">Javascript</li>
+                        </ul>
+                    </span>
+                </div>
             </li>
-            
+            <li class="bg-white p-4 mb-4 rounded shadow">
+                <div class="cursor-pointer" onclick="toggleDescription(this)">
+                    <strong class="text-xl">Online Marketplace:</strong>
+                    <span class="description block mt-2 hidden">
+                        Creating an online marketplace to sell clothes for those who attend EDM festivals.
+                        <ul class="languages list-disc list-inside mt-2">
+                            <li class="font-bold">HTML</li>
+                            <li class="font-bold">CSS</li>
+                        </ul>
+                    </span>
+                </div>
+            </li>
         </ul>
-    </div>
-    <footer>
+    </main>
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <p>&copy; 2024 My Portfolio</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        function toggleDescription(element) {
+            const description = element.querySelector('.description');
+            description.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
